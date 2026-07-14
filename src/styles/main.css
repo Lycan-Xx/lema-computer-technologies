@@ -192,6 +192,29 @@ body { font-family: 'Inter', sans-serif; background: #050505; color: #ffffff; ov
     background: linear-gradient(to right, rgba(239,68,68,0.4), rgba(239,68,68,0.1));
 }
 
+/* Filter buttons */
+.filter-btn {
+  padding: 8px 20px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #a3a3a3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.filter-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: #ffffff;
+}
+.filter-btn.active {
+  background: #EF4444;
+  border-color: #EF4444;
+  color: #ffffff;
+  box-shadow: 0 0 30px -10px rgba(239,68,68,0.5);
+}
+
 /* Toast notification */
 .toast {
     position: fixed;
