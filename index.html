@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEMA Computer Technology — Repairs, Security & Solar Solutions in Adamawa</title>
+    <meta name="description" content="LEMA Computer Technology offers professional computer repair, security systems installation, solar systems setup, networking, and spare parts in Jimeta, Adamawa State, Nigeria.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#EF4444',
+                            darkred: '#DC2626',
+                            lightred: '#F87171',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #050505; color: #ffffff; overflow-x: hidden; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000000; }
+        ::-webkit-scrollbar-thumb { background: #333333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555555; }
+
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes scaleIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes fadeInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 20px rgba(239,68,68,0.2); } 50% { box-shadow: 0 0 40px rgba(239,68,68,0.4); } }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+        @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes count-up { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; opacity: 0; }
+        .animate-scale-in { animation: scaleIn 0.8s ease-out forwards; opacity: 0; }
+        .animate-fade-in-left { animation: fadeInLeft 0.8s ease-out forwards; opacity: 0; }
+        .animate-fade-in-right { animation: fadeInRight 0.8s ease-out forwards; opacity: 0; }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+        .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+        .animate-spin-slow { animation: spin-slow 20s linear infinite; }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-700 { animation-delay: 0.7s; }
+        .delay-800 { animation-delay: 0.8s; }
+
+        /* Scroll reveal */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* Gradient text */
+        .gradient-text { background: linear-gradient(to right, #ffffff, #EF4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .gradient-text-white { background: linear-gradient(to right, #ffffff, #a3a3a3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+        /* Glass card */
+        .glass-card {
+            background: rgba(23,23,23,0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .glass-card-solid {
+            background: #0a0a0a;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        /* Service card hover */
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(239,68,68,0.3);
+            box-shadow: 0 20px 60px -15px rgba(239,68,68,0.15);
+        }
+        .service-card:hover .service-icon {
+            background: rgba(239,68,68,0.15);
+            border-color: rgba(239,68,68,0.4);
+        }
+        .service-card:hover .service-icon svg {
+            color: #EF4444;
+        }
+
+        /* Button styles */
+        .btn-primary {
+            background: #EF4444;
+            color: #ffffff;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px -10px rgba(239,68,68,0.5);
+        }
+        .btn-primary:hover {
+            background: #DC2626;
+            transform: scale(1.05);
+            box-shadow: 0 0 45px -10px rgba(239,68,68,0.6);
+        }
+        .btn-secondary {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.2);
+            transform: scale(1.05);
+        }
+
+        /* Nav link hover */
+        .nav-link { position: relative; transition: color 0.3s ease; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #EF4444;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover { color: #ffffff; }
+        .nav-link:hover::after { width: 100%; }
+
+        /* Stat counter */
+        .stat-item { transition: all 0.3s ease; }
+        .stat-item:hover { transform: scale(1.05); }
+
+        /* Product card */
+        .product-card {
+            transition: all 0.4s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(239,68,68,0.3);
+        }
+
+        /* WhatsApp floating button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37,211,102,0.6);
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-out;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Hero background glow */
+        .hero-glow {
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(239,68,68,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-glow-left {
+            position: absolute;
+            bottom: -300px;
+            left: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(239,68,68,0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Decorative dots */
+        .dot-pattern {
+            background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Process step connector */
+        .process-connector {
+            position: absolute;
+            top: 28px;
+            left: calc(50% + 28px);
+            width: calc(100% - 56px);
+            height: 2px;
+            background: linear-gradient(to right, rgba(239,68,68,0.4), rgba(239,68,68,0.1));
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            right: 24px;
+            z-index: 1001;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .toast-success {
+            background: rgba(34,197,94,0.15);
+            border: 1px solid rgba(34,197,94,0.3);
+            color: #22C55E;
+        }
+        .toast-error {
+            background: rgba(239,68,68,0.15);
+            border: 1px solid rgba(239,68,68,0.3);
+            color: #EF4444;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast toast-success">
+        <span id="toast-message">Message sent successfully!</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 h-16 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="https://z-cdn-media.chatglm.cn/files/a969f7a4-0003-4e41-9dc5-1b8c8cae7352.jpg?auth_key=1884048676-d201d2d3212c4424a186668f421ccf76-0-666a6926e089a9268912c00ca63ddf8e" alt="LEMA Computer Technology" class="h-10 w-auto">
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#services" class="nav-link text-sm text-neutral-400">Services</a>
+                <a href="#why-us" class="nav-link text-sm text-neutral-400">Why Us</a>
+                <a href="#products" class="nav-link text-sm text-neutral-400">Products</a>
+                <a href="#process" class="nav-link text-sm text-neutral-400">Process</a>
+                <a href="#contact" class="nav-link text-sm text-neutral-400">Contact</a>
+                <a href="#contact" class="btn-primary px-5 py-2 rounded-full text-sm font-medium">Get a Quote</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden text-white" onclick="toggleMobileMenu()">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 bottom-0 w-72 z-50 bg-[#0a0a0a] border-l border-white/5 p-6 pt-20">
+        <button class="absolute top-5 right-5 text-neutral-400 hover:text-white" onclick="toggleMobileMenu()">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <div class="flex flex-col gap-6">
+            <a href="#services" class="text-neutral-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Services</a>
+            <a href="#why-us" class="text-neutral-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Why Us</a>
+            <a href="#products" class="text-neutral-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Products</a>
+            <a href="#process" class="text-neutral-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Process</a>
+            <a href="#contact" class="text-neutral-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Contact</a>
+            <a href="#contact" class="btn-primary px-5 py-3 rounded-full text-sm font-medium text-center mt-4" onclick="toggleMobileMenu()">Get a Quote</a>
+        </div>
+    </div>
+    <div id="mobile-overlay" class="fixed inset-0 bg-black/60 z-40 hidden" onclick="toggleMobileMenu()"></div>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen pt-20 relative overflow-hidden">
+        <div class="hero-glow"></div>
+        <div class="hero-glow-left"></div>
+        <div class="dot-pattern absolute inset-0 opacity-30"></div>
+
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center min-h-[calc(100vh-80px)]">
+            <!-- Left Content -->
+            <div class="relative z-10">
+                <div class="animate-fade-in-up">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-medium uppercase tracking-wider mb-6">
+                        <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                        Trusted in Adamawa Since 2020
+                    </span>
+                </div>
+
+                <h1 class="animate-fade-in-up delay-100 text-4xl md:text-6xl lg:text-7xl font-semibold leading-[0.95] tracking-tight mb-6">
+                    <span class="gradient-text">Tech Solutions</span><br>
+                    <span class="text-white">You Can</span><br>
+                    <span class="text-neutral-500">Rely On</span>
+                </h1>
+
+                <p class="animate-fade-in-up delay-200 text-neutral-400 text-base md:text-lg font-light leading-relaxed max-w-lg mb-8">
+                    From computer repairs to solar installations, security systems to networking — we deliver professional, affordable technology services for homes and businesses in Jimeta & beyond.
+                </p>
+
+                <div class="animate-fade-in-up delay-300 flex flex-wrap gap-4 mb-12">
+                    <a href="#contact" class="btn-primary px-8 py-3.5 rounded-full text-sm font-medium inline-flex items-center gap-2">
+                        Get a Free Quote
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="tel:+2348000000000" class="btn-secondary px-8 py-3.5 rounded-full text-sm font-medium inline-flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        Call Us Now
+                    </a>
+                </div>
+
+                <!-- Stats -->
+                <div class="animate-fade-in-up delay-400 flex gap-8">
+                    <div class="stat-item">
+                        <div class="text-2xl font-semibold text-white">500+</div>
+                        <div class="text-xs text-neutral-500 mt-1">Repairs Done</div>
+                    </div>
+                    <div class="w-px bg-white/10"></div>
+                    <div class="stat-item">
+                        <div class="text-2xl font-semibold text-white">200+</div>
+                        <div class="text-xs text-neutral-500 mt-1">Happy Clients</div>
+                    </div>
+                    <div class="w-px bg-white/10"></div>
+                    <div class="stat-item">
+                        <div class="text-2xl font-semibold text-white">5+</div>
+                        <div class="text-xs text-neutral-500 mt-1">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right - Hero Visual -->
+            <div class="relative animate-scale-in delay-300 hidden md:block">
+                <div class="relative">
+                    <!-- Main image -->
+                    <div class="rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                        <img src="https://picsum.photos/seed/lema-tech-hero/600/700.jpg" alt="Technology Services" class="w-full h-[500px] object-cover opacity-80">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent rounded-3xl"></div>
+                    </div>
+
+                    <!-- Floating card 1 -->
+                    <div class="absolute -left-8 top-1/4 glass-card rounded-2xl p-4 animate-float" style="animation-delay: 0.5s;">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-red-500/15 border border-red-500/30 flex items-center justify-center">
+                                <i data-lucide="shield-check" class="w-5 h-5 text-red-400"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm font-medium text-white">Security Systems</div>
+                                <div class="text-xs text-neutral-500">CCTV & Alarms</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating card 2 -->
+                    <div class="absolute -right-4 bottom-1/3 glass-card rounded-2xl p-4 animate-float" style="animation-delay: 1s;">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-yellow-500/15 border border-yellow-500/30 flex items-center justify-center">
+                                <i data-lucide="sun" class="w-5 h-5 text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm font-medium text-white">Solar Solutions</div>
+                                <div class="text-xs text-neutral-500">Residential & Commercial</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating card 3 -->
+                    <div class="absolute left-1/4 -bottom-4 glass-card rounded-2xl p-4 animate-float" style="animation-delay: 1.5s;">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-green-500/15 border border-green-500/30 flex items-center justify-center">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm font-medium text-white">Verified & Trusted</div>
+                                <div class="text-xs text-neutral-500">BN-3913936</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="w-5 h-5 text-neutral-500"></i>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16 reveal">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-medium uppercase tracking-wider mb-4">
+                    What We Do
+                </span>
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+                    <span class="gradient-text-white">Our Services</span>
+                </h2>
+                <p class="text-neutral-400 font-light max-w-2xl mx-auto">
+                    Comprehensive technology solutions tailored for homes, offices, and businesses across Adamawa State.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1: Computer Repair -->
+                <div class="service-card glass-card-solid rounded-2xl p-8 reveal">
+                    <div class="service-icon w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-6 transition-all duration-300">
+                        <i data-lucide="monitor" class="w-6 h-6 text-red-400 transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-white mb-3">Computer Repair & Maintenance</h3>
+                    <p class="text-neutral-400 font-light text-sm leading-relaxed mb-4">
+                        Expert diagnosis and repair of laptops, desktops, and peripherals. Hardware upgrades, software troubleshooting, and preventive maintenance contracts.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Laptop & Desktop Repair
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            OS Installation & Recovery
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Hardware Upgrades (RAM, SSD)
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Virus & Malware Removal
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Security Systems -->
+                <div class="service-card glass-card-solid rounded-2xl p-8 reveal">
+                    <div class="service-icon w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-6 transition-all duration-300">
+                        <i data-lucide="shield" class="w-6 h-6 text-red-400 transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-white mb-3">Security Systems Installation</h3>
+                    <p class="text-neutral-400 font-light text-sm leading-relaxed mb-4">
+                        Professional installation of CCTV cameras, alarm systems, access control, and intercom systems for homes and commercial properties.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            CCTV Camera Setup
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Alarm & Burglar Systems
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Access Control Systems
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Remote Monitoring Setup
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Solar Systems -->
+                <div class="service-card glass-card-solid rounded-2xl p-8 reveal">
+                    <div class="service-icon w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-6 transition-all duration-300">
+                        <i data-lucide="sun" class="w-6 h-6 text-red-400 transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-white mb-3">Solar Systems Installation</h3>
+                    <p class="text-neutral-400 font-light text-sm leading-relaxed mb-4">
+                        Complete solar power solutions including panel installation, battery systems, inverters, and hybrid setups for reliable off-grid and backup power.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Solar Panel Installation
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Battery & Inverter Systems
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Hybrid Power Solutions
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Maintenance & Support
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 4: Networking -->
+                <div class="service-card glass-card-solid rounded-2xl p-8 reveal">
+                    <div class="service-icon w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-6 transition-all duration-300">
+                        <i data-lucide="network" class="w-6 h-6 text-red-400 transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-white mb-3">Residential & Corporate Networking</h3>
+                    <p class="text-neutral-400 font-light text-sm leading-relaxed mb-4">
+                        Design and deployment of wired and wireless networks for homes, offices, and multi-building setups. Structured cabling and network optimization.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Wi-Fi & Router Setup
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Structured Cabling
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Office Network Design
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Network Troubleshooting
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 5: Spare Parts -->
+                <div class="service-card glass-card-solid rounded-2xl p-8 reveal">
+                    <div class="service-icon w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-6 transition-all duration-300">
+                        <i data-lucide="cpu" class="w-6 h-6 text-red-400 transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-white mb-3">Spare Parts & Accessories</h3>
+                    <p class="text-neutral-400 font-light text-sm leading-relaxed mb-4">
+                        Quality computer spare parts, peripherals, and accessories at competitive prices. Genuine components for all major brands.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Hard Drives & SSDs
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            RAM & Processors
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Keyboards, Mice & Monitors
+                        </li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-500">
+                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            Cables & Adapters
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 6: Consultation CTA -->
+                <div class="service-card rounded-2xl p-8 bg-gradient-to-br from-red-500/10 to-transparent border border-red-500/20 flex flex-col justify-center items-center text-center reveal animate-pulse-glow">
+                    <div class="w-16 h-16 rounded-full bg-red-500/15 border border-red-500/30 flex items-center justify-center mb-6">
+                        <i data-lucide="message-circle" class="w-7 h-7 text-red-400"></i>
+                    </div>
+                    <h3 class="text-xl font-medium text-white mb-3">Not Sure What You Need?</h3>
+                    <p class="text-neutral-400 font-light text-sm mb-6">
+                        Talk to our experts. We'll assess your needs and recommend the best solution.
+                    </p>
+                    <a href="#contact" class="btn-primary px-6 py-3 rounded-full text-sm font-medium inline-flex items-center gap-2">
+                        Free Consultation
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-24 relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Left: Image -->
+                <div class="relative reveal">
+                    <div class="rounded-3xl overflow-hidden border border-white/10">
+                        <img src="https://picsum.photos/seed/lema-workshop/600/500.jpg" alt="Our Workshop" class="w-full h-[400px] object-cover opacity-70">
+                        <div class="absolute inset-0 bg-gradient-to-r from-[#050505]/80 to-transparent rounded-3xl"></div>
+                    </div>
+                    <!-- Experience badge -->
+                    <div class="absolute bottom-6 left-6 glass-card rounded-2xl p-5">
+                        <div class="text-3xl font-semibold text-red-400">5+</div>
+                        <div class="text-sm text-neutral-400">Years of<br>Experience</div>
+                    </div>
+                </div>
+
+                <!-- Right: Content -->
+                <div>
+                    <div class="reveal">
+                        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-medium uppercase tracking-wider mb-4">
+                            Why Choose Us
+                        </span>
+                        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
+                            <span class="gradient-text-white">Adamawa's Trusted</span><br>
+                            <span class="text-neutral-500">Tech Partner</span>
+                        </h2>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex gap-4 reveal">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-red-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Locally Based in Jimeta</h4>
+                                <p class="text-neutral-400 text-sm font-light">We're right here in Adamawa State — fast response times, no outsourcing to distant cities.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 reveal">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
+                                <i data-lucide="wallet" class="w-5 h-5 text-red-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Affordable & Transparent Pricing</h4>
+                                <p class="text-neutral-400 text-sm font-light">No hidden charges. We provide clear quotes before starting any work.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 reveal">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
+                                <i data-lucide="clock" class="w-5 h-5 text-red-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Fast Turnaround</h4>
+                                <p class="text-neutral-400 text-sm font-light">Most computer repairs completed same-day. Solar and security installations scheduled promptly.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 reveal">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
+                                <i data-lucide="award" class="w-5 h-5 text-red-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">Registered Business</h4>
+                                <p class="text-neutral-400 text-sm font-light">Officially registered with CAC (BN-3913936) — a division of LEMA Group of Companies.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 reveal">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
+                                <i data-lucide="headphones" class="w-5 h-5 text-red-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium mb-1">After-Sale Support</h4>
+                                <p class="text-neutral-400 text-sm font-light">We stand behind our work with warranty support and ongoing maintenance options.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products / Spare Parts Showcase -->
+    <section id="products" class="py-24 relative">
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-medium uppercase tracking-wider mb-4">
+                    Our Products
+                </span>
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+                    <span class="gradient-text-white">Spare Parts & Accessories</span>
+                </h2>
+                <p class="text-neutral-400 font-light max-w-2xl mx-auto">
+                    Quality components and accessories available at our shop. We source genuine parts for all major brands.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="product-card glass-card-solid rounded-2xl overflow-hidden reveal">
+                    <div class="h-48 bg-neutral-900 overflow-hidden">
+                        <img src="https://picsum.photos/seed/ssd-drive/400/300.jpg" alt="Storage Drives" class="w-full h-full object-cover opacity-60 hover:opacity-80 transition-opacity duration-300 hover:scale-105 transition-transform">
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-white font-medium text-sm mb-1">Storage Drives</h4>
+                        <p class="text-neutral-500 text-xs">HDD, SSD & Flash Drives</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card glass-card-solid rounded-2xl overflow-hidden reveal">
+                    <div class="h-48 bg-neutral-900 overflow-hidden">
+                        <img src="https://picsum.photos/seed/ram-memory/400/300.jpg" alt="Memory Modules" class="w-full h-full object-cover opacity-60 hover:opacity-80 transition-opacity duration-300 hover:scale-105 transition-transform">
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-white font-medium text-sm mb-1">Memory Modules</h4>
+                        <p class="text-neutral-500 text-xs">DDR3, DDR4 & DDR5 RAM</p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card glass-card-solid rounded-2xl overflow-hidden reveal">
+                    <div class="h-48 bg-neutral-900 overflow-hidden">
+                        <img src="https://picsum.photos/seed/monitor-screen/400/300.jpg" alt="Monitors" class="w-full h-full object-cover opacity-60 hover:opacity-80 transition-opacity duration-300 hover:scale-105 transition-transform">
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-white font-medium text-sm mb-1">Monitors & Displays</h4>
+                        <p class="text-neutral-500 text-xs">LED, LCD & Touch Screens</p>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card glass-card-solid rounded-2xl overflow-hidden reveal">
+                    <div class="h-48 bg-neutral-900 overflow-hidden">
+                        <img src="https://picsum.photos/seed/cables-tech/400/300.jpg" alt="Cables & Adapters" class="w-full h-full object-cover opacity-60 hover:opacity-80 transition-opacity duration-300 hover:scale-105 transition-transform">
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-white font-medium text-sm mb-1">Cables & Adapters</h4>
+                        <p class="text-neutral-500 text-xs">HDMI, USB, Power & Network</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10 reveal">
+                <p class="text-neutral-500 text-sm mb-4">Looking for a specific part? We can source it for you.</p>
+                <a href="#contact" class="btn-secondary px-6 py-3 rounded-full text-sm font-medium inline-flex items-center gap-2">
+                    <i data-lucide="search" class="w-4 h-4"></i>
+                    Request a Part
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works / Process -->
+    <section id="process" class="py-24 relative">
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-medium uppercase tracking-wider mb-4">
+                    How It Works
+                </span>
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+                    <span class="gradient-text-white">Simple 4-Step Process</span>
+                </h2>
+                <p class="text-neutral-400 font-light max-w-2xl mx-auto">
+                    From first contact to completed service, we keep things straightforward and stress-free.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center relative reveal">
+                    <div class="w-14 h-14 rounded-full bg-red-500/15 border-2 border-red-500/40 flex items-center justify-center mx-auto mb-5">
+                        <span class="text-red-400 font-semibold">1</span>
+                    </div>
+                    <h4 class="text-white font-medium mb-2">Contact Us</h4>
+                    <p class="text-neutral-500 text-sm font-light">Call, WhatsApp, or fill out our form. Describe your issue or need.</p>
+                    <!-- Connector (hidden on mobile) -->
+                    <div class="hidden lg:block process-connector"></div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center relative reveal">
+                    <div class="w-14 h-14 rounded-full bg-red-500/15 border-2 border-red-500/40 flex items-center justify-center mx-auto mb-5">
+                        <span class="text-red-400 font-semibold">2</span>
+                    </div>
+                    <h4 class="text-white font-medium mb-2">Free Assessment</h4>
+                    <p class="text-neutral-500 text-sm font-light">We diagnose the problem or assess your requirements — at no charge.</p>
+                    <div class="hidden lg:block process-connector"></div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center relative reveal">
+                    <div class="w-14 h-14 rounded-full bg-red-500/15 border-2 border-red-500/40 flex items-center justify-center mx-auto mb-5">
+                        <span class="text-red-400 font-semibold">3</span>
+                    </div>
+                    <h4 class="text-white font-medium mb-2">Quote & Approval</h4>
+                    <p class="text-neutral-500 text-sm font-light">Receive a transparent quote. We proceed only after your approval.</p>
+                    <div class="hidden lg:block process-connector"></div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center reveal">
+                    <div class="w-14 h-14 rounded-full bg-red-500/15 border-2 border-red-500/40 flex items-center justify-center mx-auto mb-5">
+                        <span class="text-red-400 font-semibold">4</span>
+                    </div>
+                    <h4 class="text-white font-medium mb-2">Service Delivered</h4>
+                    <p class="text-neutral-500 text-sm font-light">We complete the work, test everything, and provide warranty support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Social Proof -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <!-- Background glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-medium uppercase tracking-wider mb-4">
+                    Testimonials
+                </span>
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+                    <span class="gradient-text-white">What Our Clients Say</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="glass-card rounded-2xl p-8 reveal">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                    </div>
+                    <p class="text-neutral-300 text-sm font-light leading-relaxed mb-6">
+                        "LEMA fixed my laptop the same day. The keyboard and screen replacement was done professionally. Very affordable compared to what I was quoted elsewhere."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center text-sm font-medium text-neutral-400">AK</div>
+                        <div>
+                            <div class="text-sm font-medium text-white">Ahmad K.</div>
+                            <div class="text-xs text-neutral-500">Jimeta, Adamawa</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass-card rounded-2xl p-8 reveal">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                    </div>
+                    <p class="text-neutral-300 text-sm font-light leading-relaxed mb-6">
+                        "They installed CCTV cameras at my business premises. The quality is great and I can monitor everything from my phone. Highly recommended for security solutions."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center text-sm font-medium text-neutral-400">FM</div>
+                        <div>
+                            <div class="text-sm font-medium text-white">Fatima M.</div>
+                            <div class="text-xs text-neutral-500">Business Owner, Yola</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="glass-card rounded-2xl p-8 reveal">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                    </div>
+                    <p class="text-neutral-300 text-sm font-light leading-relaxed mb-6">
+                        "The solar installation at my home has been a game-changer. No more generator noise and fuel costs. LEMA handled everything from design to installation perfectly."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center text-sm font-medium text-neutral-400">IB</div>
+                        <div>
+                            <div class="text-sm font-medium text-white">Ibrahim B.</div>
+                            <div class="text-xs text-neutral-500">Homeowner, Jimeta</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative">
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Left: Contact Info -->
+                <div class="reveal">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-medium uppercase tracking-wider mb-4">
+                        Get In Touch
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+                        <span class="gradient-text-white">Let's Fix It</span><br>
+                        <span class="text-neutral-500">Together</span>
+                    </h2>
+                    <p class="text-neutral-400 font-light mb-10">
+                        Whether it's a broken laptop, a security concern, or you want to go solar — reach out and we'll get back to you fast.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-red-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm mb-1">Our Location</h4>
+                                <p class="text-neutral-400 text-sm font-light">Plot 27 B Karewa Maskare,<br>Jimeta, Adamawa State, Nigeria</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5 text-red-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm mb-1">Phone / WhatsApp</h4>
+                                <p class="text-neutral-400 text-sm font-light">+234 80X XXX XXXX</p>
+                                <p class="text-neutral-500 text-xs mt-1">Available Mon–Sat, 8am – 6pm</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5 text-red-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm mb-1">Email</h4>
+                                <p class="text-neutral-400 text-sm font-light">info@lemacomputertechnology.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="building" class="w-5 h-5 text-red-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm mb-1">Business Registration</h4>
+                                <p class="text-neutral-400 text-sm font-light">BN-3913936 (CAC Nigeria)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map embed placeholder -->
+                    <div class="mt-8 rounded-2xl overflow-hidden border border-white/5 h-48">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.5!2d12.45!3d9.25!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMTUnMDAuMCJOIDEywrAyNycwMC4wIkU!5e0!3m2!1sen!2sng!4v1" 
+                            width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(0.8) contrast(1.2);" 
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Right: Contact Form -->
+                <div class="reveal">
+                    <div class="glass-card-solid rounded-2xl p-8">
+                        <h3 class="text-xl font-medium text-white mb-2">Request a Quote</h3>
+                        <p class="text-neutral-500 text-sm mb-8">Fill out the form and we'll respond within a few hours.</p>
+
+                        <form id="contact-form" class="space-y-5" onsubmit="handleSubmit(event)">
+                            <div>
+                                <label class="block text-xs text-neutral-400 mb-2 font-medium">Full Name *</label>
+                                <input type="text" required placeholder="Your full name" 
+                                    class="w-full bg-neutral-900/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-red-500/50 focus:ring-1 focus:ring-red-500/20 transition-colors">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs text-neutral-400 mb-2 font-medium">Phone Number *</label>
+                                <input type="tel" required placeholder="+234 80X XXX XXXX" 
+                                    class="w-full bg-neutral-900/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-red-500/50 focus:ring-1 focus:ring-red-500/20 transition-colors">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs text-neutral-400 mb-2 font-medium">Email (Optional)</label>
+                                <input type="email" placeholder="your@email.com" 
+                                    class="w-full bg-neutral-900/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-red-500/50 focus:ring-1 focus:ring-red-500/20 transition-colors">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs text-neutral-400 mb-2 font-medium">Service Needed *</label>
+                                <select required 
+                                    class="w-full bg-neutral-900/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-red-500/50 focus:ring-1 focus:ring-red-500/20 transition-colors appearance-none cursor-pointer">
+                                    <option value="" class="bg-neutral-900">Select a service</option>
+                                    <option value="repair" class="bg-neutral-900">Computer Repair & Maintenance</option>
+                                    <option value="security" class="bg-neutral-900">Security Systems Installation</option>
+                                    <option value="solar" class="bg-neutral-900">Solar Systems Installation</option>
+                                    <option value="networking" class="bg-neutral-900">Networking (Home/Office)</option>
+                                    <option value="parts" class="bg-neutral-900">Spare Parts / Accessories</option>
+                                    <option value="other" class="bg-neutral-900">Other / Not Sure</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs text-neutral-400 mb-2 font-medium">Describe Your Need *</label>
+                                <textarea required rows="4" placeholder="Tell us about your issue or what you need..." 
+                                    class="w-full bg-neutral-900/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-red-500/50 focus:ring-1 focus:ring-red-500/20 transition-colors resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="btn-primary w-full py-3.5 rounded-xl text-sm font-medium inline-flex items-center justify-center gap-2">
+                                <span id="btn-text">Send Message</span>
+                                <i data-lucide="send" class="w-4 h-4" id="btn-icon"></i>
+                                <svg id="btn-spinner" class="hidden animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-red-500/10 via-red-500/5 to-transparent"></div>
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+            <div class="w-16 h-16 rounded-full bg-red-500/15 border border-red-500/30 flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="zap" class="w-7 h-7 text-red-400"></i>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+                Ready to Get Started?
+            </h2>
+            <p class="text-neutral-400 font-light max-w-xl mx-auto mb-8">
+                Don't let tech problems slow you down. Contact LEMA Computer Technology today and experience reliable, professional service.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="btn-primary px-8 py-3.5 rounded-full text-sm font-medium inline-flex items-center gap-2">
+                    Get a Free Quote
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <a href="https://wa.me/2348000000000" target="_blank" class="bg-green-600 hover:bg-green-500 text-white px-8 py-3.5 rounded-full text-sm font-medium inline-flex items-center gap-2 transition-all duration-300 hover:scale-105" style="box-shadow: 0 0 30px -10px rgba(34,197,94,0.5);">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Brand -->
+                <div class="lg:col-span-2">
+                    <img src="https://z-cdn-media.chatglm.cn/files/a969f7a4-0003-4e41-9dc5-1b8c8cae7352.jpg?auth_key=1884048676-d201d2d3212c4424a186668f421ccf76-0-666a6926e089a9268912c00ca63ddf8e" alt="LEMA Computer Technology" class="h-10 w-auto mb-4">
+                    <p class="text-neutral-500 text-sm font-light leading-relaxed max-w-sm mb-4">
+                        A division of LEMA Group of Companies. Providing professional technology solutions in Adamawa State since 2020.
+                    </p>
+                    <div class="flex items-center gap-2 text-xs text-neutral-600">
+                        <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+                        Registered with CAC — BN-3913936
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white text-sm font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-neutral-500 text-sm hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#why-us" class="text-neutral-500 text-sm hover:text-white transition-colors">Why Choose Us</a></li>
+                        <li><a href="#products" class="text-neutral-500 text-sm hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#process" class="text-neutral-500 text-sm hover:text-white transition-colors">How It Works</a></li>
+                        <li><a href="#contact" class="text-neutral-500 text-sm hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white text-sm font-medium mb-4">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-neutral-500 text-sm hover:text-white transition-colors">Computer Repair</a></li>
+                        <li><a href="#services" class="text-neutral-500 text-sm hover:text-white transition-colors">Security Systems</a></li>
+                        <li><a href="#services" class="text-neutral-500 text-sm hover:text-white transition-colors">Solar Installation</a></li>
+                        <li><a href="#services" class="text-neutral-500 text-sm hover:text-white transition-colors">Networking</a></li>
+                        <li><a href="#services" class="text-neutral-500 text-sm hover:text-white transition-colors">Spare Parts</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="text-neutral-600 text-xs">
+                    © 2025 LEMA Computer Technology. A Division of LEMA Group of Companies. All rights reserved.
+                </p>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-500 hover:text-white hover:border-white/20 transition-all">
+                        <i data-lucide="facebook" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-500 hover:text-white hover:border-white/20 transition-all">
+                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-500 hover:text-white hover:border-white/20 transition-all">
+                        <i data-lucide="twitter" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2348000000000" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const overlay = document.getElementById('mobile-overlay');
+            menu.classList.toggle('open');
+            overlay.classList.toggle('hidden');
+            document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+        }
+
+        // Scroll reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Stagger children reveal
+        document.querySelectorAll('.grid').forEach(grid => {
+            const children = grid.querySelectorAll('.reveal');
+            children.forEach((child, index) => {
+                child.style.transitionDelay = `${index * 0.1}s`;
+            });
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.style.borderBottomColor = 'rgba(255,255,255,0.08)';
+                nav.style.backgroundColor = 'rgba(5,5,5,0.95)';
+            } else {
+                nav.style.borderBottomColor = 'rgba(255,255,255,0.05)';
+                nav.style.backgroundColor = 'rgba(5,5,5,0.8)';
+            }
+        });
+
+        // Toast notification
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            toast.className = `toast toast-${type} show`;
+            toastMessage.textContent = message;
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 4000);
+        }
+
+        // Form submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const btnIcon = document.getElementById('btn-icon');
+            const btnSpinner = document.getElementById('btn-spinner');
+
+            // Show loading state
+            btnText.textContent = 'Sending...';
+            btnIcon.classList.add('hidden');
+            btnSpinner.classList.remove('hidden');
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+
+            // Simulate form submission (replace with actual backend call)
+            setTimeout(() => {
+                btnText.textContent = 'Message Sent!';
+                btnSpinner.classList.add('hidden');
+                btn.style.opacity = '1';
+                showToast('Your message has been sent successfully! We\'ll contact you soon.', 'success');
+
+                // Reset form
+                setTimeout(() => {
+                    document.getElementById('contact-form').reset();
+                    btnText.textContent = 'Send Message';
+                    btnIcon.classList.remove('hidden');
+                    btn.disabled = false;
+                }, 2000);
+            }, 2000);
+        }
+
+        // Active nav link highlighting
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.style.color = '#ffffff';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
