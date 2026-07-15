@@ -1,9 +1,4 @@
 // Extracted JS from index.html
-// Initialize Lucide icons
-if (typeof lucide !== 'undefined') {
-  lucide.createIcons();
-}
-
 // Mobile menu toggle
 function toggleMobileMenu() {
   const menu = document.getElementById('mobile-menu');

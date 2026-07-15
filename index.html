@@ -7,7 +7,6 @@
     <meta name="description" content="LEMA Computer Technology offers professional computer repair, security systems installation, solar systems setup, networking, and spare parts in Jimeta, Adamawa State, Nigeria.">
     <link rel="icon" href="favicon.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -40,8 +39,9 @@
     <nav class="fixed top-0 left-0 right-0 z-50 h-16 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
             <!-- Logo -->
-            <a href="#" class="flex items-center gap-3 group">
+            <a href="index.html" class="flex items-center gap-3 group">
                 <img src="favicon.png" alt="LEMA Computer Technology" class="h-10 w-auto">
+                <span class="text-xl font-semibold text-white tracking-tight">LEMA</span>
             </a>
 
             <!-- Desktop Nav -->
@@ -56,7 +56,7 @@
 
             <!-- Mobile Menu Button -->
             <button id="menu-toggle" class="md:hidden text-white" onclick="toggleMobileMenu()">
-                <i data-lucide="menu" class="w-6 h-6"></i>
+                <svg class="antd-icon w-6 h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z" /></svg>
             </button>
         </div>
     </nav>
@@ -64,7 +64,7 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 bottom-0 w-72 z-50 bg-[#0a0a0a] border-l border-white/5 p-6 pt-20">
         <button class="absolute top-5 right-5 text-neutral-400 hover:text-white" onclick="toggleMobileMenu()">
-            <i data-lucide="x" class="w-6 h-6"></i>
+            <svg class="antd-icon w-6 h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M799.86 166.31c.02 0 .04.02.08.06l57.69 57.7c.04.03.05.05.06.08a.12.12 0 010 .06c0 .03-.02.05-.06.09L569.93 512l287.7 287.7c.04.04.05.06.06.09a.12.12 0 010 .07c0 .02-.02.04-.06.08l-57.7 57.69c-.03.04-.05.05-.07.06a.12.12 0 01-.07 0c-.03 0-.05-.02-.09-.06L512 569.93l-287.7 287.7c-.04.04-.06.05-.09.06a.12.12 0 01-.07 0c-.02 0-.04-.02-.08-.06l-57.69-57.7c-.04-.03-.05-.05-.06-.07a.12.12 0 010-.07c0-.03.02-.05.06-.09L454.07 512l-287.7-287.7c-.04-.04-.05-.06-.06-.09a.12.12 0 010-.07c0-.02.02-.04.06-.08l57.7-57.69c.03-.04.05-.05.07-.06a.12.12 0 01.07 0c.03 0 .05.02.09.06L512 454.07l287.7-287.7c.04-.04.06-.05.09-.06a.12.12 0 01.07 0z" /></svg>
         </button>
         <div class="flex flex-col gap-6">
             <a href="#services" class="text-neutral-400 hover:text-white transition-colors" onclick="toggleMobileMenu()">Services</a>
@@ -106,10 +106,10 @@
                 <div class="animate-fade-in-up delay-300 flex flex-wrap gap-4 mb-12">
                     <a href="#contact" class="btn-primary px-8 py-3.5 rounded-full text-sm font-medium inline-flex items-center gap-2">
                         Get a Free Quote
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        <svg class="antd-icon w-4 h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 000-48.4z" /></svg>
                     </a>
                     <a href="tel:+2348000000000" class="btn-secondary px-8 py-3.5 rounded-full text-sm font-medium inline-flex items-center gap-2">
-                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        <svg class="antd-icon w-4 h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M877.1 238.7L770.6 132.3c-13-13-30.4-20.3-48.8-20.3s-35.8 7.2-48.8 20.3L558.3 246.8c-13 13-20.3 30.5-20.3 48.9 0 18.5 7.2 35.8 20.3 48.9l89.6 89.7a405.46 405.46 0 01-86.4 127.3c-36.7 36.9-79.6 66-127.2 86.6l-89.6-89.7c-13-13-30.4-20.3-48.8-20.3a68.2 68.2 0 00-48.8 20.3L132.3 673c-13 13-20.3 30.5-20.3 48.9 0 18.5 7.2 35.8 20.3 48.9l106.4 106.4c22.2 22.2 52.8 34.9 84.2 34.9 6.5 0 12.8-.5 19.2-1.6 132.4-21.8 263.8-92.3 369.9-198.3C818 606 888.4 474.6 910.4 342.1c6.3-37.6-6.3-76.3-33.3-103.4zm-37.6 91.5c-19.5 117.9-82.9 235.5-178.4 331s-213 158.9-330.9 178.4c-14.8 2.5-30-2.5-40.8-13.2L184.9 721.9 295.7 611l119.8 120 .9.9 21.6-8a481.29 481.29 0 00285.7-285.8l8-21.6-120.8-120.7 110.8-110.9 104.5 104.5c10.8 10.8 15.8 26 13.3 40.8z" /></svg>
                         Call Us Now
                     </a>
                 </div>
@@ -146,7 +146,7 @@
                     <!-- <div class="absolute -left-8 top-1/4 glass-card rounded-2xl p-4 animate-float" style="animation-delay: 0.5s;">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-xl bg-red-500/15 border border-red-500/30 flex items-center justify-center">
-                                <i data-lucide="shield-check" class="w-5 h-5 text-red-400"></i>
+                                <svg class="antd-icon w-5 h-5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M866.9 169.9L527.1 54.1C523 52.7 517.5 52 512 52s-11 .7-15.1 2.1L157.1 169.9c-8.3 2.8-15.1 12.4-15.1 21.2v482.4c0 8.8 5.7 20.4 12.6 25.9L499.3 968c3.5 2.7 8 4.1 12.6 4.1s9.2-1.4 12.6-4.1l344.7-268.6c6.9-5.4 12.6-17 12.6-25.9V191.1c.2-8.8-6.6-18.3-14.9-21.2zM810 654.3L512 886.5 214 654.3V226.7l298-101.6 298 101.6v427.6zm-405.8-201c-3-4.1-7.8-6.6-13-6.6H336c-6.5 0-10.3 7.4-6.5 12.7l126.4 174a16.1 16.1 0 0026 0l212.6-292.7c3.8-5.3 0-12.7-6.5-12.7h-55.2c-5.1 0-10 2.5-13 6.6L468.9 542.4l-64.7-89.1z" /></svg>
                             </div>
                             <div>
                                 <div class="text-sm font-medium text-white">Security Systems</div>
@@ -159,7 +159,7 @@
                     <!-- <div class="absolute -right-4 bottom-1/3 glass-card rounded-2xl p-4 animate-float" style="animation-delay: 1s;">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-xl bg-yellow-500/15 border border-yellow-500/30 flex items-center justify-center">
-                                <i data-lucide="sun" class="w-5 h-5 text-yellow-400"></i>
+                                <svg class="antd-icon w-5 h-5 text-yellow-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M548 818v126a16 16 0 01-16 16h-40a16 16 0 01-16-16V818c15.85 1.64 27.84 2.46 36 2.46 8.15 0 20.16-.82 36-2.46m205.25-115.66l89.1 89.1a16 16 0 010 22.62l-28.29 28.29a16 16 0 01-22.62 0l-89.1-89.1c12.37-10.04 21.43-17.95 27.2-23.71 5.76-5.77 13.67-14.84 23.71-27.2m-482.5 0c10.04 12.36 17.95 21.43 23.71 27.2 5.77 5.76 14.84 13.67 27.2 23.71l-89.1 89.1a16 16 0 01-22.62 0l-28.29-28.29a16 16 0 010-22.63zM512 278c129.24 0 234 104.77 234 234S641.24 746 512 746 278 641.24 278 512s104.77-234 234-234m0 72c-89.47 0-162 72.53-162 162s72.53 162 162 162 162-72.53 162-162-72.53-162-162-162M206 476c-1.64 15.85-2.46 27.84-2.46 36 0 8.15.82 20.16 2.46 36H80a16 16 0 01-16-16v-40a16 16 0 0116-16zm738 0a16 16 0 0116 16v40a16 16 0 01-16 16H818c1.64-15.85 2.46-27.84 2.46-36 0-8.15-.82-20.16-2.46-36zM814.06 180.65l28.29 28.29a16 16 0 010 22.63l-89.1 89.09c-10.04-12.37-17.95-21.43-23.71-27.2-5.77-5.76-14.84-13.67-27.2-23.71l89.1-89.1a16 16 0 0122.62 0m-581.5 0l89.1 89.1c-12.37 10.04-21.43 17.95-27.2 23.71-5.76 5.77-13.67 14.84-23.71 27.2l-89.1-89.1a16 16 0 010-22.62l28.29-28.29a16 16 0 0122.62 0M532 64a16 16 0 0116 16v126c-15.85-1.64-27.84-2.46-36-2.46-8.15 0-20.16.82-36 2.46V80a16 16 0 0116-16z" /></svg>
                             </div>
                             <div>
                                 <div class="text-sm font-medium text-white">Solar Solutions</div>
@@ -172,7 +172,7 @@
                     <!-- <div class="absolute left-1/4 -bottom-4 glass-card rounded-2xl p-4 animate-float" style="animation-delay: 1.5s;">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-xl bg-green-500/15 border border-green-500/30 flex items-center justify-center">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                <svg class="antd-icon w-5 h-5 text-green-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm193.5 301.7l-210.6 292a31.8 31.8 0 01-51.7 0L318.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.2 0 19.9 4.9 25.9 13.3l71.2 98.8 157.2-218c6-8.3 15.6-13.3 25.9-13.3H699c6.5 0 10.3 7.4 6.5 12.7z" /></svg>
                             </div>
                             <div>
                                 <div class="text-sm font-medium text-white">Verified & Trusted</div>
@@ -186,7 +186,7 @@
 
         <!-- Scroll indicator -->
         <!-- <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <i data-lucide="chevron-down" class="w-5 h-5 text-neutral-500"></i>
+            <svg class="antd-icon w-5 h-5 text-neutral-500" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z" /></svg>
         </div> -->
     </section>
 
@@ -211,7 +211,7 @@
                 <!-- Service 1: Computer Repair -->
                 <div class="service-card glass-card-solid rounded-2xl p-8 reveal">
                     <div class="service-icon w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-6 transition-all duration-300">
-                        <i data-lucide="monitor" class="w-6 h-6 text-red-400 transition-colors duration-300"></i>
+                        <svg class="antd-icon w-6 h-6 text-red-400 transition-colors duration-300" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M692.8 412.7l.2-.2-34.6-44.3a7.97 7.97 0 00-11.2-1.4l-50.4 39.3-70.5-90.1a7.97 7.97 0 00-11.2-1.4l-37.9 29.7a7.97 7.97 0 00-1.4 11.2l70.5 90.2-.2.1 34.6 44.3c2.7 3.5 7.7 4.1 11.2 1.4l50.4-39.3 64.1 82c2.7 3.5 7.7 4.1 11.2 1.4l37.9-29.6c3.5-2.7 4.1-7.7 1.4-11.2l-64.1-82.1zM608 112c-167.9 0-304 136.1-304 304 0 70.3 23.9 135 63.9 186.5L114.3 856.1a8.03 8.03 0 000 11.3l42.3 42.3c3.1 3.1 8.2 3.1 11.3 0l253.6-253.6C473 696.1 537.7 720 608 720c167.9 0 304-136.1 304-304S775.9 112 608 112zm161.2 465.2C726.2 620.3 668.9 644 608 644s-118.2-23.7-161.2-66.8C403.7 534.2 380 476.9 380 416s23.7-118.2 66.8-161.2c43-43.1 100.3-66.8 161.2-66.8s118.2 23.7 161.2 66.8c43.1 43 66.8 100.3 66.8 161.2s-23.7 118.2-66.8 161.2z" /></svg>
                     </div>
                     <h3 class="text-xl font-medium text-white mb-3">Computer Repair & Maintenance</h3>
                     <p class="text-neutral-400 font-light text-sm leading-relaxed mb-4">
@@ -219,19 +219,19 @@
                     </p>
                     <ul class="space-y-2">
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Laptop & Desktop Repair
                         </li>
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             OS Installation & Recovery
                         </li>
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Hardware Upgrades (RAM, SSD)
                         </li>
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Virus & Malware Removal
                         </li>
                     </ul>
@@ -240,7 +240,7 @@
                 <!-- Service 2: Security Systems -->
                 <div class="service-card glass-card-solid rounded-2xl p-8 reveal">
                     <div class="service-icon w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-6 transition-all duration-300">
-                        <i data-lucide="shield" class="w-6 h-6 text-red-400 transition-colors duration-300"></i>
+                        <svg class="antd-icon w-6 h-6 text-red-400 transition-colors duration-300" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="0 0 1024 1024" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M512 64L128 192v384c0 212.1 171.9 384 384 384s384-171.9 384-384V192L512 64zm312 512c0 172.3-139.7 312-312 312S200 748.3 200 576V246l312-110 312 110v330z" /><path d="M378.4 475.1a35.91 35.91 0 00-50.9 0 35.91 35.91 0 000 50.9l129.4 129.4 2.1 2.1a33.98 33.98 0 0048.1 0L730.6 434a33.98 33.98 0 000-48.1l-2.8-2.8a33.98 33.98 0 00-48.1 0L483 579.7 378.4 475.1z" /></svg>
                     </div>
                     <h3 class="text-xl font-medium text-white mb-3">Security Systems Installation</h3>
                     <p class="text-neutral-400 font-light text-sm leading-relaxed mb-4">
@@ -248,19 +248,19 @@
                     </p>
                     <ul class="space-y-2">
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             CCTV Camera Setup
                         </li>
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Alarm & Burglar Systems
                         </li>
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Access Control Systems
                         </li>
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Remote Monitoring Setup
                         </li>
                     </ul>
@@ -269,7 +269,7 @@
                 <!-- Service 3: Solar Systems -->
                 <div class="service-card glass-card-solid rounded-2xl p-8 reveal">
                     <div class="service-icon w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-6 transition-all duration-300">
-                        <i data-lucide="sun" class="w-6 h-6 text-red-400 transition-colors duration-300"></i>
+                        <svg class="antd-icon w-6 h-6 text-red-400 transition-colors duration-300" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M548 818v126a16 16 0 01-16 16h-40a16 16 0 01-16-16V818c15.85 1.64 27.84 2.46 36 2.46 8.15 0 20.16-.82 36-2.46m205.25-115.66l89.1 89.1a16 16 0 010 22.62l-28.29 28.29a16 16 0 01-22.62 0l-89.1-89.1c12.37-10.04 21.43-17.95 27.2-23.71 5.76-5.77 13.67-14.84 23.71-27.2m-482.5 0c10.04 12.36 17.95 21.43 23.71 27.2 5.77 5.76 14.84 13.67 27.2 23.71l-89.1 89.1a16 16 0 01-22.62 0l-28.29-28.29a16 16 0 010-22.63zM512 278c129.24 0 234 104.77 234 234S641.24 746 512 746 278 641.24 278 512s104.77-234 234-234m0 72c-89.47 0-162 72.53-162 162s72.53 162 162 162 162-72.53 162-162-72.53-162-162-162M206 476c-1.64 15.85-2.46 27.84-2.46 36 0 8.15.82 20.16 2.46 36H80a16 16 0 01-16-16v-40a16 16 0 0116-16zm738 0a16 16 0 0116 16v40a16 16 0 01-16 16H818c1.64-15.85 2.46-27.84 2.46-36 0-8.15-.82-20.16-2.46-36zM814.06 180.65l28.29 28.29a16 16 0 010 22.63l-89.1 89.09c-10.04-12.37-17.95-21.43-23.71-27.2-5.77-5.76-14.84-13.67-27.2-23.71l89.1-89.1a16 16 0 0122.62 0m-581.5 0l89.1 89.1c-12.37 10.04-21.43 17.95-27.2 23.71-5.76 5.77-13.67 14.84-23.71 27.2l-89.1-89.1a16 16 0 010-22.62l28.29-28.29a16 16 0 0122.62 0M532 64a16 16 0 0116 16v126c-15.85-1.64-27.84-2.46-36-2.46-8.15 0-20.16.82-36 2.46V80a16 16 0 0116-16z" /></svg>
                     </div>
                     <h3 class="text-xl font-medium text-white mb-3">Solar Systems Installation</h3>
                     <p class="text-neutral-400 font-light text-sm leading-relaxed mb-4">
@@ -277,19 +277,19 @@
                     </p>
                     <ul class="space-y-2">
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Solar Panel Installation
                         </li>
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Battery & Inverter Systems
                         </li>
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Hybrid Power Solutions
                         </li>
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Maintenance & Support
                         </li>
                     </ul>
@@ -298,7 +298,7 @@
                 <!-- Service 4: Networking -->
                 <div class="service-card glass-card-solid rounded-2xl p-8 reveal">
                     <div class="service-icon w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-6 transition-all duration-300">
-                        <i data-lucide="network" class="w-6 h-6 text-red-400 transition-colors duration-300"></i>
+                        <svg class="antd-icon w-6 h-6 text-red-400 transition-colors duration-300" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M888 680h-54V540H546v-92h238c8.8 0 16-7.2 16-16V168c0-8.8-7.2-16-16-16H240c-8.8 0-16 7.2-16 16v264c0 8.8 7.2 16 16 16h238v92H190v140h-54c-4.4 0-8 3.6-8 8v176c0 4.4 3.6 8 8 8h176c4.4 0 8-3.6 8-8V688c0-4.4-3.6-8-8-8h-54v-72h220v72h-54c-4.4 0-8 3.6-8 8v176c0 4.4 3.6 8 8 8h176c4.4 0 8-3.6 8-8V688c0-4.4-3.6-8-8-8h-54v-72h220v72h-54c-4.4 0-8 3.6-8 8v176c0 4.4 3.6 8 8 8h176c4.4 0 8-3.6 8-8V688c0-4.4-3.6-8-8-8zM256 805.3c0 1.5-1.2 2.7-2.7 2.7h-58.7c-1.5 0-2.7-1.2-2.7-2.7v-58.7c0-1.5 1.2-2.7 2.7-2.7h58.7c1.5 0 2.7 1.2 2.7 2.7v58.7zm288 0c0 1.5-1.2 2.7-2.7 2.7h-58.7c-1.5 0-2.7-1.2-2.7-2.7v-58.7c0-1.5 1.2-2.7 2.7-2.7h58.7c1.5 0 2.7 1.2 2.7 2.7v58.7zM288 384V216h448v168H288zm544 421.3c0 1.5-1.2 2.7-2.7 2.7h-58.7c-1.5 0-2.7-1.2-2.7-2.7v-58.7c0-1.5 1.2-2.7 2.7-2.7h58.7c1.5 0 2.7 1.2 2.7 2.7v58.7zM360 300a40 40 0 1080 0 40 40 0 10-80 0z" /></svg>
                     </div>
                     <h3 class="text-xl font-medium text-white mb-3">Residential & Corporate Networking</h3>
                     <p class="text-neutral-400 font-light text-sm leading-relaxed mb-4">
@@ -306,19 +306,19 @@
                     </p>
                     <ul class="space-y-2">
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Wi-Fi & Router Setup
                         </li>
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Structured Cabling
                         </li>
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Office Network Design
                         </li>
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Network Troubleshooting
                         </li>
                     </ul>
@@ -327,7 +327,7 @@
                 <!-- Service 5: Spare Parts -->
                 <div class="service-card glass-card-solid rounded-2xl p-8 reveal">
                     <div class="service-icon w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-6 transition-all duration-300">
-                        <i data-lucide="cpu" class="w-6 h-6 text-red-400 transition-colors duration-300"></i>
+                        <svg class="antd-icon w-6 h-6 text-red-400 transition-colors duration-300" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M928 140H96c-17.7 0-32 14.3-32 32v496c0 17.7 14.3 32 32 32h380v112H304c-8.8 0-16 7.2-16 16v48c0 4.4 3.6 8 8 8h432c4.4 0 8-3.6 8-8v-48c0-8.8-7.2-16-16-16H548V700h380c17.7 0 32-14.3 32-32V172c0-17.7-14.3-32-32-32zm-40 488H136V212h752v416z" /></svg>
                     </div>
                     <h3 class="text-xl font-medium text-white mb-3">Spare Parts & Accessories</h3>
                     <p class="text-neutral-400 font-light text-sm leading-relaxed mb-4">
@@ -335,19 +335,19 @@
                     </p>
                     <ul class="space-y-2">
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Hard Drives & SSDs
                         </li>
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             RAM & Processors
                         </li>
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Keyboards, Mice & Monitors
                         </li>
                         <li class="flex items-center gap-2 text-xs text-neutral-500">
-                            <i data-lucide="check" class="w-3.5 h-3.5 text-red-400"></i>
+                            <svg class="antd-icon w-3.5 h-3.5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 00-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z" /></svg>
                             Cables & Adapters
                         </li>
                     </ul>
@@ -356,7 +356,7 @@
                 <!-- Service 6: Consultation CTA -->
                 <div class="service-card rounded-2xl p-8 bg-gradient-to-br from-red-500/10 to-transparent border border-red-500/20 flex flex-col justify-center items-center text-center reveal animate-pulse-glow">
                     <div class="w-16 h-16 rounded-full bg-red-500/15 border border-red-500/30 flex items-center justify-center mb-6">
-                        <i data-lucide="message-circle" class="w-7 h-7 text-red-400"></i>
+                        <svg class="antd-icon w-7 h-7 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M464 512a48 48 0 1096 0 48 48 0 10-96 0zm200 0a48 48 0 1096 0 48 48 0 10-96 0zm-400 0a48 48 0 1096 0 48 48 0 10-96 0zm661.2-173.6c-22.6-53.7-55-101.9-96.3-143.3a444.35 444.35 0 00-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6.3-119.3 12.3-174.5 35.9a445.35 445.35 0 00-142 96.5c-40.9 41.3-73 89.3-95.2 142.8-23 55.4-34.6 114.3-34.3 174.9A449.4 449.4 0 00112 714v152a46 46 0 0046 46h152.1A449.4 449.4 0 00510 960h2.1c59.9 0 118-11.6 172.7-34.3a444.48 444.48 0 00142.8-95.2c41.3-40.9 73.8-88.7 96.5-142 23.6-55.2 35.6-113.9 35.9-174.5.3-60.9-11.5-120-34.8-175.6zm-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-.4-99.7 37.7-193.3 107.6-263.8 69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9 44.6 18.7 84.6 45.6 119 80 34.3 34.3 61.3 74.4 80 119 19.4 46.2 29.1 95.2 28.9 145.8-.6 99.6-39.7 192.9-110.1 262.7z" /></svg>
                     </div>
                     <h3 class="text-xl font-medium text-white mb-3">Not Sure What You Need?</h3>
                     <p class="text-neutral-400 font-light text-sm mb-6">
@@ -364,7 +364,7 @@
                     </p>
                     <a href="#contact" class="btn-primary px-6 py-3 rounded-full text-sm font-medium inline-flex items-center gap-2">
                         Free Consultation
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        <svg class="antd-icon w-4 h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 000-48.4z" /></svg>
                     </a>
                 </div>
             </div>
@@ -404,7 +404,7 @@
                     <div class="space-y-6">
                         <div class="flex gap-4 reveal">
                             <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
-                                <i data-lucide="map-pin" class="w-5 h-5 text-red-400"></i>
+                                <svg class="antd-icon w-5 h-5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M854.6 289.1a362.49 362.49 0 00-79.9-115.7 370.83 370.83 0 00-118.2-77.8C610.7 76.6 562.1 67 512 67c-50.1 0-98.7 9.6-144.5 28.5-44.3 18.3-84 44.5-118.2 77.8A363.6 363.6 0 00169.4 289c-19.5 45-29.4 92.8-29.4 142 0 70.6 16.9 140.9 50.1 208.7 26.7 54.5 64 107.6 111 158.1 80.3 86.2 164.5 138.9 188.4 153a43.9 43.9 0 0022.4 6.1c7.8 0 15.5-2 22.4-6.1 23.9-14.1 108.1-66.8 188.4-153 47-50.4 84.3-103.6 111-158.1C867.1 572 884 501.8 884 431.1c0-49.2-9.9-97-29.4-142zM512 880.2c-65.9-41.9-300-207.8-300-449.1 0-77.9 31.1-151.1 87.6-206.3C356.3 169.5 431.7 139 512 139s155.7 30.5 212.4 85.9C780.9 280 812 353.2 812 431.1c0 241.3-234.1 407.2-300 449.1zm0-617.2c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm79.2 255.2A111.6 111.6 0 01512 551c-29.9 0-58-11.7-79.2-32.8A111.6 111.6 0 01400 439c0-29.9 11.7-58 32.8-79.2C454 338.6 482.1 327 512 327c29.9 0 58 11.6 79.2 32.8C612.4 381 624 409.1 624 439c0 29.9-11.6 58-32.8 79.2z" /></svg>
                             </div>
                             <div>
                                 <h4 class="text-white font-medium mb-1">Locally Based in Jimeta</h4>
@@ -414,7 +414,7 @@
 
                         <div class="flex gap-4 reveal">
                             <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
-                                <i data-lucide="wallet" class="w-5 h-5 text-red-400"></i>
+                                <svg class="antd-icon w-5 h-5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 464H528V448h312v128zm0 264H184V184h656v200H496c-17.7 0-32 14.3-32 32v192c0 17.7 14.3 32 32 32h344v200zM580 512a40 40 0 1080 0 40 40 0 10-80 0z" /></svg>
                             </div>
                             <div>
                                 <h4 class="text-white font-medium mb-1">Affordable & Transparent Pricing</h4>
@@ -424,7 +424,7 @@
 
                         <div class="flex gap-4 reveal">
                             <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
-                                <i data-lucide="clock" class="w-5 h-5 text-red-400"></i>
+                                <svg class="antd-icon w-5 h-5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z" /><path d="M686.7 638.6L544.1 535.5V288c0-4.4-3.6-8-8-8H488c-4.4 0-8 3.6-8 8v275.4c0 2.6 1.2 5 3.3 6.5l165.4 120.6c3.6 2.6 8.6 1.8 11.2-1.7l28.6-39c2.6-3.7 1.8-8.7-1.8-11.2z" /></svg>
                             </div>
                             <div>
                                 <h4 class="text-white font-medium mb-1">Fast Turnaround</h4>
@@ -434,7 +434,7 @@
 
                         <div class="flex gap-4 reveal">
                             <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
-                                <i data-lucide="award" class="w-5 h-5 text-red-400"></i>
+                                <svg class="antd-icon w-5 h-5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M868 160h-92v-40c0-4.4-3.6-8-8-8H256c-4.4 0-8 3.6-8 8v40h-92a44 44 0 00-44 44v148c0 81.7 60 149.6 138.2 162C265.7 630.2 359 721.7 476 734.5v105.2H280c-17.7 0-32 14.3-32 32V904c0 4.4 3.6 8 8 8h512c4.4 0 8-3.6 8-8v-32.3c0-17.7-14.3-32-32-32H548V734.5C665 721.7 758.3 630.2 773.8 514 852 501.6 912 433.7 912 352V204a44 44 0 00-44-44zM184 352V232h64v207.6a91.99 91.99 0 01-64-87.6zm520 128c0 49.1-19.1 95.4-53.9 130.1-34.8 34.8-81 53.9-130.1 53.9h-16c-49.1 0-95.4-19.1-130.1-53.9-34.8-34.8-53.9-81-53.9-130.1V184h384v296zm136-128c0 41-26.9 75.8-64 87.6V232h64v120z" /></svg>
                             </div>
                             <div>
                                 <h4 class="text-white font-medium mb-1">Registered Business</h4>
@@ -444,7 +444,7 @@
 
                         <div class="flex gap-4 reveal">
                             <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
-                                <i data-lucide="headphones" class="w-5 h-5 text-red-400"></i>
+                                <svg class="antd-icon w-5 h-5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M512 128c-212.1 0-384 171.9-384 384v360c0 13.3 10.7 24 24 24h184c35.3 0 64-28.7 64-64V624c0-35.3-28.7-64-64-64H200v-48c0-172.3 139.7-312 312-312s312 139.7 312 312v48H688c-35.3 0-64 28.7-64 64v208c0 35.3 28.7 64 64 64h184c13.3 0 24-10.7 24-24V512c0-212.1-171.9-384-384-384zM328 632v192H200V632h128zm496 192H696V632h128v192z" /></svg>
                             </div>
                             <div>
                                 <h4 class="text-white font-medium mb-1">After-Sale Support</h4>
@@ -521,7 +521,7 @@
 
             <div class="text-center mt-10 reveal">
                 <a href="store.html" class="btn-primary px-8 py-3.5 rounded-full text-sm font-medium inline-flex items-center gap-2">
-                    <i data-lucide="store" class="w-4 h-4"></i>
+                    <svg class="antd-icon w-4 h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M882 272.1V144c0-17.7-14.3-32-32-32H174c-17.7 0-32 14.3-32 32v128.1c-16.7 1-30 14.9-30 31.9v131.7a177 177 0 0014.4 70.4c4.3 10.2 9.6 19.8 15.6 28.9v345c0 17.6 14.3 32 32 32h676c17.7 0 32-14.3 32-32V535a175 175 0 0015.6-28.9c9.5-22.3 14.4-46 14.4-70.4V304c0-17-13.3-30.9-30-31.9zM214 184h596v88H214v-88zm362 656.1H448V736h128v104.1zm234 0H640V704c0-17.7-14.3-32-32-32H416c-17.7 0-32 14.3-32 32v136.1H214V597.9c2.9 1.4 5.9 2.8 9 4 22.3 9.4 46 14.1 70.4 14.1s48-4.7 70.4-14.1c13.8-5.8 26.8-13.2 38.7-22.1.2-.1.4-.1.6 0a180.4 180.4 0 0038.7 22.1c22.3 9.4 46 14.1 70.4 14.1 24.4 0 48-4.7 70.4-14.1 13.8-5.8 26.8-13.2 38.7-22.1.2-.1.4-.1.6 0a180.4 180.4 0 0038.7 22.1c22.3 9.4 46 14.1 70.4 14.1 24.4 0 48-4.7 70.4-14.1 3-1.3 6-2.6 9-4v242.2zm30-404.4c0 59.8-49 108.3-109.3 108.3-40.8 0-76.4-22.1-95.2-54.9-2.9-5-8.1-8.1-13.9-8.1h-.6c-5.7 0-11 3.1-13.9 8.1A109.24 109.24 0 01512 544c-40.7 0-76.2-22-95-54.7-3-5.1-8.4-8.3-14.3-8.3s-11.4 3.2-14.3 8.3a109.63 109.63 0 01-95.1 54.7C233 544 184 495.5 184 435.7v-91.2c0-.3.2-.5.5-.5h655c.3 0 .5.2.5.5v91.2z" /></svg>
                     Visit Our Store
                 </a>
             </div>
@@ -608,11 +608,11 @@
                 <!-- Testimonial 1 -->
                 <div class="glass-card rounded-2xl p-8 reveal">
                     <div class="flex gap-1 mb-4">
-                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <svg class="antd-icon w-4 h-4 text-yellow-400 fill-yellow-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z" /></svg>
+                        <svg class="antd-icon w-4 h-4 text-yellow-400 fill-yellow-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z" /></svg>
+                        <svg class="antd-icon w-4 h-4 text-yellow-400 fill-yellow-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z" /></svg>
+                        <svg class="antd-icon w-4 h-4 text-yellow-400 fill-yellow-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z" /></svg>
+                        <svg class="antd-icon w-4 h-4 text-yellow-400 fill-yellow-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z" /></svg>
                     </div>
                     <p class="text-neutral-300 text-sm font-light leading-relaxed mb-6">
                         "LEMA fixed my laptop the same day. The keyboard and screen replacement was done professionally. Very affordable compared to what I was quoted elsewhere."
@@ -629,11 +629,11 @@
                 <!-- Testimonial 2 -->
                 <div class="glass-card rounded-2xl p-8 reveal">
                     <div class="flex gap-1 mb-4">
-                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <svg class="antd-icon w-4 h-4 text-yellow-400 fill-yellow-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z" /></svg>
+                        <svg class="antd-icon w-4 h-4 text-yellow-400 fill-yellow-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z" /></svg>
+                        <svg class="antd-icon w-4 h-4 text-yellow-400 fill-yellow-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z" /></svg>
+                        <svg class="antd-icon w-4 h-4 text-yellow-400 fill-yellow-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z" /></svg>
+                        <svg class="antd-icon w-4 h-4 text-yellow-400 fill-yellow-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z" /></svg>
                     </div>
                     <p class="text-neutral-300 text-sm font-light leading-relaxed mb-6">
                         "They installed CCTV cameras at my business premises. The quality is great and I can monitor everything from my phone. Highly recommended for security solutions."
@@ -650,11 +650,11 @@
                 <!-- Testimonial 3 -->
                 <div class="glass-card rounded-2xl p-8 reveal">
                     <div class="flex gap-1 mb-4">
-                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
-                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <svg class="antd-icon w-4 h-4 text-yellow-400 fill-yellow-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z" /></svg>
+                        <svg class="antd-icon w-4 h-4 text-yellow-400 fill-yellow-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z" /></svg>
+                        <svg class="antd-icon w-4 h-4 text-yellow-400 fill-yellow-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z" /></svg>
+                        <svg class="antd-icon w-4 h-4 text-yellow-400 fill-yellow-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z" /></svg>
+                        <svg class="antd-icon w-4 h-4 text-yellow-400 fill-yellow-400" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 00.6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0046.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z" /></svg>
                     </div>
                     <p class="text-neutral-300 text-sm font-light leading-relaxed mb-6">
                         "The solar installation at my home has been a game-changer. No more generator noise and fuel costs. LEMA handled everything from design to installation perfectly."
@@ -692,7 +692,7 @@
                     <div class="space-y-6">
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="map-pin" class="w-5 h-5 text-red-400"></i>
+                                <svg class="antd-icon w-5 h-5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M854.6 289.1a362.49 362.49 0 00-79.9-115.7 370.83 370.83 0 00-118.2-77.8C610.7 76.6 562.1 67 512 67c-50.1 0-98.7 9.6-144.5 28.5-44.3 18.3-84 44.5-118.2 77.8A363.6 363.6 0 00169.4 289c-19.5 45-29.4 92.8-29.4 142 0 70.6 16.9 140.9 50.1 208.7 26.7 54.5 64 107.6 111 158.1 80.3 86.2 164.5 138.9 188.4 153a43.9 43.9 0 0022.4 6.1c7.8 0 15.5-2 22.4-6.1 23.9-14.1 108.1-66.8 188.4-153 47-50.4 84.3-103.6 111-158.1C867.1 572 884 501.8 884 431.1c0-49.2-9.9-97-29.4-142zM512 880.2c-65.9-41.9-300-207.8-300-449.1 0-77.9 31.1-151.1 87.6-206.3C356.3 169.5 431.7 139 512 139s155.7 30.5 212.4 85.9C780.9 280 812 353.2 812 431.1c0 241.3-234.1 407.2-300 449.1zm0-617.2c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm79.2 255.2A111.6 111.6 0 01512 551c-29.9 0-58-11.7-79.2-32.8A111.6 111.6 0 01400 439c0-29.9 11.7-58 32.8-79.2C454 338.6 482.1 327 512 327c29.9 0 58 11.6 79.2 32.8C612.4 381 624 409.1 624 439c0 29.9-11.6 58-32.8 79.2z" /></svg>
                             </div>
                             <div>
                                 <h4 class="text-white font-medium text-sm mb-1">Our Location</h4>
@@ -702,7 +702,7 @@
 
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="phone" class="w-5 h-5 text-red-400"></i>
+                                <svg class="antd-icon w-5 h-5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M877.1 238.7L770.6 132.3c-13-13-30.4-20.3-48.8-20.3s-35.8 7.2-48.8 20.3L558.3 246.8c-13 13-20.3 30.5-20.3 48.9 0 18.5 7.2 35.8 20.3 48.9l89.6 89.7a405.46 405.46 0 01-86.4 127.3c-36.7 36.9-79.6 66-127.2 86.6l-89.6-89.7c-13-13-30.4-20.3-48.8-20.3a68.2 68.2 0 00-48.8 20.3L132.3 673c-13 13-20.3 30.5-20.3 48.9 0 18.5 7.2 35.8 20.3 48.9l106.4 106.4c22.2 22.2 52.8 34.9 84.2 34.9 6.5 0 12.8-.5 19.2-1.6 132.4-21.8 263.8-92.3 369.9-198.3C818 606 888.4 474.6 910.4 342.1c6.3-37.6-6.3-76.3-33.3-103.4zm-37.6 91.5c-19.5 117.9-82.9 235.5-178.4 331s-213 158.9-330.9 178.4c-14.8 2.5-30-2.5-40.8-13.2L184.9 721.9 295.7 611l119.8 120 .9.9 21.6-8a481.29 481.29 0 00285.7-285.8l8-21.6-120.8-120.7 110.8-110.9 104.5 104.5c10.8 10.8 15.8 26 13.3 40.8z" /></svg>
                             </div>
                             <div>
                                 <h4 class="text-white font-medium text-sm mb-1">Phone / WhatsApp</h4>
@@ -713,7 +713,7 @@
 
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="mail" class="w-5 h-5 text-red-400"></i>
+                                <svg class="antd-icon w-5 h-5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-40 110.8V792H136V270.8l-27.6-21.5 39.3-50.5 42.8 33.3h643.1l42.8-33.3 39.3 50.5-27.7 21.5zM833.6 232L512 482 190.4 232l-42.8-33.3-39.3 50.5 27.6 21.5 341.6 265.6a55.99 55.99 0 0068.7 0L888 270.8l27.6-21.5-39.3-50.5-42.7 33.2z" /></svg>
                             </div>
                             <div>
                                 <h4 class="text-white font-medium text-sm mb-1">Email</h4>
@@ -723,7 +723,7 @@
 
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="building" class="w-5 h-5 text-red-400"></i>
+                                <svg class="antd-icon w-5 h-5 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M894 462c30.9 0 43.8-39.7 18.7-58L530.8 126.2a31.81 31.81 0 00-37.6 0L111.3 404c-25.1 18.2-12.2 58 18.8 58H192v374h-72c-4.4 0-8 3.6-8 8v52c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-52c0-4.4-3.6-8-8-8h-72V462h62zM512 196.7l271.1 197.2H240.9L512 196.7zM264 462h117v374H264V462zm189 0h117v374H453V462zm307 374H642V462h118v374z" /></svg>
                             </div>
                             <div>
                                 <h4 class="text-white font-medium text-sm mb-1">Business Registration</h4>
@@ -789,7 +789,7 @@
 
                             <button type="submit" id="submit-btn" class="btn-primary w-full py-3.5 rounded-xl text-sm font-medium inline-flex items-center justify-center gap-2">
                                 <span id="btn-text">Send Message</span>
-                                <i data-lucide="send" class="w-4 h-4" id="btn-icon"></i>
+                                <svg class="antd-icon w-4 h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M931.4 498.9L94.9 79.5c-3.4-1.7-7.3-2.1-11-1.2a15.99 15.99 0 00-11.7 19.3l86.2 352.2c1.3 5.3 5.2 9.6 10.4 11.3l147.7 50.7-147.6 50.7c-5.2 1.8-9.1 6-10.3 11.3L72.2 926.5c-.9 3.7-.5 7.6 1.2 10.9 3.9 7.9 13.5 11.1 21.5 7.2l836.5-417c3.1-1.5 5.6-4.1 7.2-7.1 3.9-8 .7-17.6-7.2-21.6zM170.8 826.3l50.3-205.6 295.2-101.3c2.3-.8 4.2-2.6 5-5 1.4-4.2-.8-8.7-5-10.2L221.1 403 171 198.2l628 314.9-628.2 313.2z" /></svg>
                                 <svg id="btn-spinner" class="hidden animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
@@ -810,7 +810,7 @@
 
         <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
             <div class="w-16 h-16 rounded-full bg-red-500/15 border border-red-500/30 flex items-center justify-center mx-auto mb-6">
-                <i data-lucide="zap" class="w-7 h-7 text-red-400"></i>
+                <svg class="antd-icon w-7 h-7 text-red-400" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M848 359.3H627.7L825.8 109c4.1-5.3.4-13-6.3-13H436c-2.8 0-5.5 1.5-6.9 4L170 547.5c-3.1 5.3.7 12 6.9 12h174.4l-89.4 357.6c-1.9 7.8 7.5 13.3 13.3 7.7L853.5 373c5.2-4.9 1.7-13.7-5.5-13.7zM378.2 732.5l60.3-241H281.1l189.6-327.4h224.6L487 427.4h211L378.2 732.5z" /></svg>
             </div>
             <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
                 Ready to Get Started?
@@ -821,7 +821,7 @@
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#contact" class="btn-primary px-8 py-3.5 rounded-full text-sm font-medium inline-flex items-center gap-2">
                     Get a Free Quote
-                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <svg class="antd-icon w-4 h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 000-48.4z" /></svg>
                 </a>
                 <a href="https://wa.me/2348000000000" target="_blank" class="bg-green-600 hover:bg-green-500 text-white px-8 py-3.5 rounded-full text-sm font-medium inline-flex items-center gap-2 transition-all duration-300 hover:scale-105" style="box-shadow: 0 0 30px -10px rgba(34,197,94,0.5);">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -842,7 +842,7 @@
                         A division of LEMA Group of Companies. Providing professional technology solutions in Adamawa State since 2020.
                     </p>
                     <div class="flex items-center gap-2 text-xs text-neutral-600">
-                        <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+                        <svg class="antd-icon w-3.5 h-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" fill="none" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M866.9 169.9L527.1 54.1C523 52.7 517.5 52 512 52s-11 .7-15.1 2.1L157.1 169.9c-8.3 2.8-15.1 12.4-15.1 21.2v482.4c0 8.8 5.7 20.4 12.6 25.9L499.3 968c3.5 2.7 8 4.1 12.6 4.1s9.2-1.4 12.6-4.1l344.7-268.6c6.9-5.4 12.6-17 12.6-25.9V191.1c.2-8.8-6.6-18.3-14.9-21.2zM810 654.3L512 886.5 214 654.3V226.7l298-101.6 298 101.6v427.6zm-405.8-201c-3-4.1-7.8-6.6-13-6.6H336c-6.5 0-10.3 7.4-6.5 12.7l126.4 174a16.1 16.1 0 0026 0l212.6-292.7c3.8-5.3 0-12.7-6.5-12.7h-55.2c-5.1 0-10 2.5-13 6.6L468.9 542.4l-64.7-89.1z" /></svg>
                         Registered with CAC : BN-3913936
                     </div>
                 </div>
@@ -878,13 +878,13 @@
                 </p>
                 <div class="flex items-center gap-4">
                     <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-500 hover:text-white hover:border-white/20 transition-all">
-                        <i data-lucide="facebook" class="w-4 h-4"></i>
+                        <svg class="antd-icon w-4 h-4" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-92.4 233.5h-63.9c-50.1 0-59.8 23.8-59.8 58.8v77.1h119.6l-15.6 120.7h-104V912H539.2V602.2H434.9V481.4h104.3v-89c0-103.3 63.1-159.6 155.3-159.6 44.2 0 82.1 3.3 93.2 4.8v107.9z" /></svg>
                     </a>
                     <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-500 hover:text-white hover:border-white/20 transition-all">
-                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                        <svg class="antd-icon w-4 h-4" width="100%" height="100%" fill="currentColor" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3 645.3 585.4 645.3 512 585.4 378.7 512 378.7zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zM512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9 717.1 398.5 717.1 512 625.5 717.1 512 717.1zm213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9 47.9 21.4 47.9 47.9a47.84 47.84 0 01-47.9 47.9z" /></svg>
                     </a>
                     <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-500 hover:text-white hover:border-white/20 transition-all">
-                        <i data-lucide="twitter" class="w-4 h-4"></i>
+                        <svg class="antd-icon w-4 h-4" width="100%" height="100%" fill="currentColor" fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M921 912L601.11 445.75l.55.43L890.08 112H793.7L558.74 384 372.15 112H119.37l298.65 435.31-.04-.04L103 912h96.39L460.6 609.38 668.2 912zM333.96 184.73l448.83 654.54H706.4L257.2 184.73z" /></svg>
                     </a>
                 </div>
             </div>

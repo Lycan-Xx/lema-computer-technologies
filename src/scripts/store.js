@@ -1,7 +1,3 @@
-if (typeof lucide !== 'undefined') {
-  lucide.createIcons();
-}
-
 const filterBtns = document.querySelectorAll('.filter-btn');
 const productCards = document.querySelectorAll('.product-card');
 const noResults = document.getElementById('no-results');
